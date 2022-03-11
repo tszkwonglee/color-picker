@@ -14,10 +14,11 @@
     />
   </head>
   <body>
+    <h1>Color Palette Generator</h1>
     <main class="container">
       <form action="#" id="color-picker">
         <input name="seed-color" type="color" class="seed-color" />
-        <select name="color-mode" id="color-mode" class="color-mode">
+        <!-- <select name="color-mode" id="color-mode" class="color-mode">
           <option value="monochrome" selected>Monochrome</option>
           <option value="monochrome-dark">Monochrome-dark</option>
           <option value="monochrome-light">Monochrome-light</option>
@@ -25,31 +26,54 @@
           <option value="complement">Complement</option>
           <option value="analogic-complement">Analogic-complement</option>
           <option value="triad">Triad</option>
-        </select>
+        </select> -->
+        <div class="color-mode" id="color-mode">
+          <input
+            name="color-mode"
+            type="text"
+            id="color-mode-input"
+            class="color-mode-input"
+            readonly
+            value="Monochrome"
+          />
+          <div class="option">
+            <div onclick="select('Monochrome')">Monochrome</div>
+            <div onclick="select('Monochrome-dark')">Monochrome-dark</div>
+            <div onclick="select('Monochrome-light')">Monochrome-light</div>
+            <div onclick="select('Analogic')">Analogic</div>
+            <div onclick="select('Complement')">Complement</div>
+            <div onclick="select('Analogic-complement')">
+              Analogic-complement
+            </div>
+            <div onclick="select('Triad')">Triad</div>
+          </div>
+        </div>
+
         <button type="submit">Get color scheme</button>
       </form>
       <div class="display-container">
         <div class="display-child">
           <div class="color-board" id="board-1"></div>
-          <p class="color-code" id="code-1">#f55a5a</p>
+          <p class="color-code" id="code-1">#FFFFFF</p>
         </div>
         <div class="display-child">
           <div class="color-board" id="board-2"></div>
-          <p class="color-code" id="code-2">#2b283a</p>
+          <p class="color-code" id="code-2">#FFFFFF</p>
         </div>
         <div class="display-child">
           <div class="color-board" id="board-3"></div>
-          <p class="color-code" id="code-3">#fbf3ab</p>
+          <p class="color-code" id="code-3">#FFFFFF</p>
         </div>
         <div class="display-child">
           <div class="color-board" id="board-4"></div>
-          <p class="color-code" id="code-4">#aad1b6</p>
+          <p class="color-code" id="code-4">#FFFFFF</p>
         </div>
         <div class="display-child">
           <div class="color-board" id="board-5"></div>
-          <p class="color-code" id="code-5">#a626d3</p>
+          <p class="color-code" id="code-5">#FFFFFF</p>
         </div>
       </div>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
